@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Disable Youtube Ads",
+  "version": "1.0.0",
+  "description": "Disable Youtube Ads",
+  "author": "Mahabub Sunny",
+  "content_scripts": [
+    {
+      "matches": ["https://*.youtube.com/watch?v=*"],
+      "js": ["./Scripts/stopAds.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": ["tabs", "storage", "contextMenus"],
+  "icons": {
+    "16": "./Icons/icon16.png",
+    "48": "./Icons/icon48.png",
+    "128": "./Icons/icon128.png"
+  }
+}
